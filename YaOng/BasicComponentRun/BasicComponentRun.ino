@@ -11,9 +11,11 @@ void setup() {
   servo1.attach(SERVO_PIN);
   pinMode(ULTRASONIC_TRIG_PIN, OUTPUT);
   pinMode(ULTRASONIC_ECHO_PIN, INPUT);
-
+  pinMode(ISD_REC_PIN, OUTPUT);
+  pinMode(ISD_PLAY_E_PIN, OUTPUT);
+  printISDGuide();
 }
 
 void loop() {
-  lightLEDIfLightCDS();
+  listenSerialISDCommend();
 }
