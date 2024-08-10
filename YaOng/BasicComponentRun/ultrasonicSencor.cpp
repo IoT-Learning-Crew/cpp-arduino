@@ -1,8 +1,9 @@
 // YaOng BS1004
 // Board : ESP32 Dev Module (esp32 by Espressif 2.0.16)
-// ledBlink.cpp
+// ultrasonicSencor.cpp
 #include "header.h"
 /*
+  setup :
   pinMode(ULTRASONIC_TRIG_PIN, OUTPUT);
   pinMode(ULTRASONIC_ECHO_PIN, INPUT);
 */
@@ -22,7 +23,7 @@ int distanceUseUltrasonic() {
 
 void printDistance(){
   long distance = distanceUseUltrasonic();
-  Serial.print("DIstance : ");
+  Serial.print("Distance : ");
   Serial.print(distance);
   Serial.println(" Cm");
 }

@@ -1,11 +1,8 @@
 // YaOng BS1004
 // Board : ESP32 Dev Module (esp32 by Espressif 2.0.16)
-// ledBlink.cpp
+// CDSSencor.cpp
 #include "header.h"
-/*
-  pinMode(ULTRASONIC_TRIG_PIN, OUTPUT);
-  pinMode(ULTRASONIC_ECHO_PIN, INPUT);
-*/
+
 float quantityOfLightCDS() {
   delay(MS_20);
   float light = 0;
