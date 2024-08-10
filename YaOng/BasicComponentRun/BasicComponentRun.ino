@@ -8,13 +8,12 @@ Servo servo1;
 void setup() {
   Serial.begin(SERIAL_NUMBER);
   pinMode(LED_PIN, OUTPUT);
-  pinMode(14, OUTPUT);
   servo1.attach(SERVO_PIN);
+  pinMode(ULTRASONIC_TRIG_PIN, OUTPUT);
+  pinMode(ULTRASONIC_ECHO_PIN, INPUT);
 
 }
 
 void loop() {
-  blinkTime(MS_1000);
-  blinkPin(14);
-  rotateServo(90);
+  lightLEDIfCloseDistance();
 }
