@@ -3,16 +3,20 @@
 #ifndef HEADER_H
 #define HEADER_H
 #include "Arduino.h"
+#include <ESP32Servo.h>
 
 #define LED_PIN 2
 #define SERVO_PIN 17
 #define SERIAL_NUMBER 115200
 
+#define MS_20  20
 #define MS_500  500
 #define MS_1000 1000
 #define MS_2000 2000
 
+extern Servo servo1;
+
 void blinkPin(int pinNumber);
 void blinkTime(int ms);
-
+void rotateServo(int maxAngle);
 #endif

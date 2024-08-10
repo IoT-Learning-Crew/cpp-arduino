@@ -7,9 +7,9 @@ setup : pinMode(LED_PIN, OUTPUT);
 */
 void blinkPin(int pinNumber) {
   digitalWrite(pinNumber, HIGH);
-  delay(500);
+  delay(MS_500);
   digitalWrite(pinNumber, LOW);
-  delay(500);
+  delay(MS_500);
 }
 
 void blinkTime(int ms) {
