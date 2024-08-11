@@ -3,7 +3,8 @@
 #ifndef HEADER_H
 #define HEADER_H
 #include "Arduino.h"
-#include <ESP32Servo.h>
+// #include <ESP32Servo.h>
+#include "WiFi.h"
 
 #define SERIAL_NUMBER 115200
 #define LED_PIN 14
@@ -13,6 +14,12 @@
 #define CDS_ANALOG_PIN A6 //D34
 #define ISD_REC_PIN 2
 #define ISD_PLAY_E_PIN 4
+#define WIFI_SSID "********"
+#define WIFI_PASSWORD "********"
+#define WIFI_AP_SSID "dodododo"
+#define WIFI_AP_PASSWORD "helloworld"
+#define WIFI_FIX_THIRD_NUMBER 4
+#define WIFI_FIX_FOURTH_NUMBER 1
 
 #define MS_10  10
 #define MS_20  20
@@ -22,24 +29,33 @@
 #define S_5 5000
 #define S_10 10000
 
-extern Servo servo1;
+// extern Servo servo1;
 
 // LED
-void blinkPin(int pinNumber);
-void blinkTime(int ms);
-// 서보모터
-void rotateServo(int maxAngle);
-// Ultrasonic 초음파센서
-void printDistance();
-void lightLEDIfCloseDistance();
-int distanceUseUltrasonic();
-// CDS 조도센서
-float quantityOfLightCDS();
-void printLight();
-void lightLEDIfLightCDS();
-// ISD1820 사운드 녹음 모듈
-void listenSerialISDCommend();
-void printISDGuide();
-void recordISD();
-void playISD();
+// void blinkPin(int pinNumber);
+// void blinkTime(int ms);
+// // 서보모터
+// void rotateServo(int maxAngle);
+// // Ultrasonic 초음파센서
+// void printDistance();
+// void lightLEDIfCloseDistance();
+// int distanceUseUltrasonic();
+// // CDS 조도센서
+// float quantityOfLightCDS();
+// void printLight();
+// void lightLEDIfLightCDS();
+// // ISD1820 사운드 녹음 모듈
+// void listenSerialISDCommend();
+// void printISDGuide();
+// void recordISD();
+// void playISD();
+// wifi
+void connectWifiSTA();
+void listenClient(WiFiClient client);
+void printClintWebpageHrefLED(WiFiClient client);
+void printClientWebpageButtonLED(WiFiClient client, String headerLine);
+void orderLEDWithCurrentLine(String currentLine);
+void scanWifi();
+void setWifiAp();
+void fixIpAddress();
 #endif
